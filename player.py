@@ -19,3 +19,13 @@ class Player(Turtle):
 
     def move_back(self):
         self.back(MOVE_DISTANCE)
+
+    def go_to_start(self):
+        self.goto(STARTING_POSITION)
+
+    def crossed_the_line(self):
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
+
